@@ -32,7 +32,7 @@ public class ProductView {
         System.out.println("------STT------PRICE------NAME------");
         List<Product> productList = productController.sortProduct();
         for (int i=0 ; i< productList.size(); i++){
-            System.out.println("------ " + productList.get(i).getId() + " ------ " +productList.get(i).getPrice() + " ------ " + productList.get(i).getName() + "-------");
+            System.out.println("------ " + productList.get(i).getId() + " ------ " +productList.get(i).getPrice() + " ------ " + productList.get(i).getName() + "-------" );
         }
         System.out.println("Enter 'back' return");
         String back = scanner.nextLine();
