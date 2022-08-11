@@ -11,6 +11,9 @@ public class Main {
         System.out.println("2: CreatProduct");
         System.out.println("3: SortProduct");
         System.out.println("4: Remove");
+        System.out.println("5: Search");
+        System.out.println("6: Edit");
+        System.out.println("7: Exit");
         int choiceMenu = scanner.nextInt();
         switch (choiceMenu){
             case 1:
@@ -24,6 +27,18 @@ public class Main {
                 break;
             case 4:
                 new ProductView().removeProduct();
+                break;
+            case 5:
+                new ProductView().searchProduct();
+                break;
+            case 6:
+                new ProductView().editProduct();
+                break;
+            case 7:
+                System.exit(0);
+                break;
+            default:
+
         }
     }
 

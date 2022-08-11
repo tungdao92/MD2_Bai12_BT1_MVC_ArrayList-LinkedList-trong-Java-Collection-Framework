@@ -13,7 +13,7 @@ public class ProductServiceIMPL implements IProductService {
         productList.add(new Product(1, 1000, "Milk"));
         productList.add(new Product(2, 2000, "Sugar"));
         productList.add(new Product(3, 900, "Oil"));
-        productList.add(new Product(4, 500, "Sugar"));
+        productList.add(new Product(4, 500, "Salt"));
     }
 
     @Override
@@ -37,6 +37,24 @@ public class ProductServiceIMPL implements IProductService {
     @Override
     public List<Product> remove(int id) {
         productList.remove(id -1);
+        return productList;
+    }
+
+    @Override
+    public List<Product> search(String name) {
+        List<Product> products = new ArrayList<>();
+        for (Product product: productList) {
+            if (product.getName().equals(name)){
+                products.add(product);
+            }
+        }
+        return products;
+    }
+
+    @Override
+    public List<Product> edit(int id, int price, String name) {
+        productList.get(id - 1).setPrice(price);
+        productList.get(id - 1).setName(name);
         return productList;
     }
 

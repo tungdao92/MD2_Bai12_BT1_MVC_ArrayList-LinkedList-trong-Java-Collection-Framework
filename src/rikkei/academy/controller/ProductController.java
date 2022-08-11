@@ -21,5 +21,12 @@ public class ProductController {
     public List<Product> removeProduct(int id){
         return iProductService.remove(id);
     }
+    public List<Product> searchProduct(String name){
+        return iProductService.search(name);
+    }
+    public List<Product> editProduct(int id, int price, String name){
+        return iProductService.edit(id, price, name);
+    }
+
 
 }

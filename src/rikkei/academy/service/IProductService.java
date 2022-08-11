@@ -9,4 +9,6 @@ public interface IProductService {
     List<Product> findAll();
     List<Product> save (Product product);
     List<Product> remove(int id);
+    List<Product> search (String name);
+    List<Product> edit (int id, int price, String name);
 }
